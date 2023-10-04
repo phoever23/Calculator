@@ -8,3 +8,11 @@
     border: 1px solid black;
 }
 
+.line-one {
+    display: flex;
+    gap:10px;
+}
+
+#back-space {
+    width:35%;
+}
