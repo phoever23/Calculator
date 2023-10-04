@@ -8,9 +8,11 @@ function subtract(a, b) {
 function multiply(a, b) {
     return a * b;
 };
-function divide(a, b) {
-    return a / b;
+function divide(a, b) {    
+    if (b === 0) {return "ERROR"}
+    else {return Math.round(a / b * 1000) /1000};    
 };
+
 
 function operate (number1, operator, number2) {
     return operator(number1,number2);
@@ -42,7 +44,7 @@ operators.forEach(oper => {oper.addEventListener("click",(e) => {
 });
 
 equal.addEventListener("click",()=>{
-    displayValue.innerText = accumulator;    
+    !accumulator ? displayValue.innerText = "ERROR" : displayValue.innerText = accumulator;    
 })
 
 const clear = document.querySelector("#clear");
